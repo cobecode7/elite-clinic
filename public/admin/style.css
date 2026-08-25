@@ -1,0 +1,43 @@
+:root{
+  --ink:#12141c; --paper:#fbf8f1; --white:#ffffff; --blue:#2f6fed; --yellow:#ffcb3c; --mint:#33d0a8; --coral:#ff6b57;
+  --shadow: 6px 6px 0 var(--ink); --shadow-sm: 4px 4px 0 var(--ink);
+}
+*{box-sizing:border-box; margin:0; padding:0;}
+body{font-family:'Tajawal', sans-serif; background:var(--paper); color:var(--ink);}
+.hidden{display:none !important;}
+.btn{border:3px solid var(--ink); padding:12px 20px; font-weight:800; cursor:pointer; box-shadow:var(--shadow-sm); border-radius:12px;}
+.btn-blue{background:var(--blue); color:#fff;}
+
+/* Login */
+.login-screen{height:100vh; display:flex; align-items:center; justify-content:center;}
+.login-card{background:#fff; padding:40px; border:3px solid var(--ink); border-radius:20px; box-shadow:var(--shadow); width:400px; text-align:center;}
+.login-card h2{margin-bottom:20px; font-family:'Cairo';}
+.login-card input{width:100%; margin-bottom:15px; padding:12px; border:2.5px solid var(--ink); border-radius:10px; font-family:'Tajawal';}
+.error-msg{color:var(--coral); margin-top:10px; font-weight:700;}
+
+/* Dashboard Layout */
+.dashboard{display:flex; height:100vh;}
+.sidebar{width:250px; background:var(--ink); color:#fff; padding:30px 20px;}
+.sidebar h3{font-family:'Cairo'; margin-bottom:30px; color:var(--yellow);}
+.sidebar nav{display:flex; flex-direction:column; gap:15px;}
+.sidebar a{color:#fff; text-decoration:none; font-weight:700; padding:10px; border-radius:8px; transition:0.2s;}
+.sidebar a:hover{background:var(--blue);}
+.content{flex:1; padding:40px; overflow-y:auto;}
+
+/* Sections */
+.section h2{margin-bottom:30px; font-family:'Cairo';}
+.stats-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:20px;}
+.stat-card{padding:30px; border:3px solid var(--ink); border-radius:16px; box-shadow:var(--shadow-sm); text-align:center;}
+.stat-card strong{display:block; font-size:40px; font-family:'Cairo';}
+.stat-card span{font-weight:700;}
+.bg-yellow{background:var(--yellow);} .bg-coral{background:var(--coral); color:#fff;} .bg-mint{background:var(--mint);}
+
+/* Bookings & Doctors List */
+.bookings-list, .doctors-list{display:flex; flex-direction:column; gap:15px;}
+.booking-item, .doctor-item{background:#fff; border:3px solid var(--ink); border-radius:12px; padding:20px; box-shadow:var(--shadow-sm); display:flex; justify-content:space-between; align-items:center;}
+.status-pending{color:var(--coral); font-weight:800;}
+.status-confirmed{color:green; font-weight:800;}
+
+/* Doctor Form */
+.doctor-form{display:flex; gap:15px; margin-bottom:30px;}
+.doctor-form input{flex:1; padding:12px; border:2.5px solid var(--ink); border-radius:10px;}

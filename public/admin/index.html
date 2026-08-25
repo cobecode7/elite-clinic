@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>لوحة تحكم عيادة النخبة</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@600;700;800;900&family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- شاشة تسجيل الدخول -->
+  <div id="loginScreen" class="login-screen">
+    <div class="login-card">
+      <h2>تسجيل الدخول للإدارة</h2>
+      <input type="text" id="username" placeholder="اسم المستخدم (admin)">
+      <input type="password" id="password" placeholder="كلمة المرور (admin123)">
+      <button id="loginBtn" class="btn btn-blue">دخول</button>
+      <div id="loginError" class="error-msg"></div>
+    </div>
+  </div>
+
+  <!-- لوحة التحكم الرئيسية -->
+  <div id="dashboard" class="dashboard hidden">
+    <aside class="sidebar">
+      <h3>النخبة | إدارة</h3>
+      <nav>
+        <a href="#" onclick="showSection('stats')">الإحصائيات</a>
+        <a href="#" onclick="showSection('bookings')">الحجوزات</a>
+        <a href="#" onclick="showSection('doctors')">الأطباء</a>
+        <a href="/" target="_blank">عرض الموقع</a>
+      </nav>
+    </aside>
+
+    <main class="content">
+      <!-- قسم الإحصائيات -->
+      <section id="stats" class="section">
+        <h2>نظرة عامة</h2>
+        <div class="stats-grid">
+          <div class="stat-card bg-yellow"><strong id="totalBookings">0</strong><span>إجمالي الحجوزات</span></div>
+          <div class="stat-card bg-coral"><strong id="pendingBookings">0</strong><span>حجوزات معلقة</span></div>
+          <div class="stat-card bg-mint"><strong id="totalDoctors">0</strong><span>عدد الأطباء</span></div>
+        </div>
+      </section>
+
+      <!-- قسم الحجوزات -->
+      <section id="bookings" class="section hidden">
+        <h2>طلبات الحجز</h2>
+
+                  <!-- قائمة الفلترة -->
+        <div class="filter-bar">
+          <label>تصفية الحجوزات:</label>
+          <select id="bookingFilter" onchange="loadBookings()">
+            <option value="all">عرض الكل</option>
+            <option value="pending">المعلقة فقط</option>
+            <option value="confirmed">المؤكدة فقط</option>
+          </select>
+        </div>
+
+        <div id="bookingsList" class="bookings-list"></div>
+      </section>
+
+      <!-- قسم الأطباء -->
+      <section id="doctors" class="section hidden">
+        <h2>إدارة الأطباء</h2>
+        <div class="doctor-form">
+          <input type="text" id="docName" placeholder="اسم الطبيب">
+          <input type="text" id="docSpec" placeholder="التخصص">
+          <button class="btn btn-mint" onclick="addDoctor()">إضافة طبيب</button>
+        </div>
+        <div id="doctorsList" class="doctors-list"></div>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>عيادة النخبة الطبية</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@600;700;800;900&family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <div class="wrap nav-row">
+      <div class="brand"><span class="logo-badge">✚</span> عيادة النخبة الطبية</div>
+      <nav class="nav" id="mainNav">
+        <a href="#home">الرئيسية</a>
+        <a href="#services">خدماتنا</a>
+        <a href="#doctors">أطباؤنا</a>
+        <a href="#testimonials">آراء المرضى</a>
+        <a href="#book">تواصل معنا</a>
+      </nav>
+      <div class="header-actions">
+        <div class="phone-pill">📞 <span>920001234</span></div>
+        <a href="#book" class="btn btn-yellow btn-sm">احجز موعدك</a>
+        <button class="menu-toggle" id="menuToggle">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero" id="home">
+    <div class="deco-dots"></div>
+    <div class="wrap">
+      <div class="hero-text">
+        <span class="eyebrow">✦ عيادة متعددة التخصصات</span>
+        <h1>رعايتك الصحية <mark>أولويتنا</mark> في كل زيارة</h1>
+        <p>فريق طبي معتمد، أجهزة حديثة، وحجز إلكتروني سهل — كل ما تحتاجه لرعاية صحية موثوقة تحت سقف واحد.</p>
+        <div class="hero-actions">
+          <a href="#book" class="btn btn-yellow">احجز موعدك الآن ←</a>
+          <a href="#services" class="btn btn-outline-white">تصفح خدماتنا</a>
+        </div>
+        <div class="hero-stats">
+          <div><strong>+15</strong><span>سنة خبرة</span></div>
+          <div><strong>50+</strong><span>طبيب متخصص</span></div>
+          <div><strong>20K+</strong><span>مريض راضٍ</span></div>
+          <div><strong>4.9★</strong><span>تقييم المرضى</span></div>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="floating-chip chip-doctor">
+          <span class="dot-icon">✓</span> د. سارة متاحة اليوم
+        </div>
+        <div class="browser-card">
+          <div class="browser-topbar">
+            <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+          </div>
+          <div class="browser-body">
+            <div class="booking-title">احجز موعدك <span class="badge">إلكتروني</span></div>
+            <div class="days-row">
+              <div class="day-chip">أحد</div>
+              <div class="day-chip active">اثنين</div>
+              <div class="day-chip">ثلاثاء</div>
+              <div class="day-chip">أربعاء</div>
+            </div>
+            <div class="slots-row">
+              <div class="slot">9:00 ص</div>
+              <div class="slot picked">11:30 ص</div>
+              <div class="slot">1:00 م</div>
+            </div>
+            <div class="confirm-btn" id="heroConfirmBtn">تأكيد الموعد ✓</div>
+          </div>
+        </div>
+        <div class="floating-chip chip-rating">⭐ 4.9 / 5</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="trust">
+    <div class="wrap">
+      <div class="trust-card"><strong>50+</strong><span>طبيب واستشاري</span></div>
+      <div class="trust-card"><strong>15</strong><span>قسم طبي متكامل</span></div>
+      <div class="trust-card"><strong>24/7</strong><span>خدمة الطوارئ</span></div>
+      <div class="trust-card"><strong>98%</strong><span>رضا المرضى</span></div>
+    </div>
+  </section>
+
+  <section class="services" id="services">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">✦ خدماتنا</span>
+        <h2>أقسام طبية متكاملة تخدمك</h2>
+        <p>نقدّم رعاية شاملة عبر فريق من الاستشاريين والأخصائيين، مدعومين بأحدث الأجهزة الطبية.</p>
+      </div>
+      <div class="services-grid">
+        <div class="folder-card">
+          <div class="folder-top bg-yellow"><span class="plus-badge">+</span><div class="icon-circle">🦷</div></div>
+          <div class="folder-bottom"><h3>طب وتجميل الأسنان</h3><p>تنظيف، تقويم، وابتسامة هوليوود بأيدي استشاريين معتمدين.</p><a href="#book">احجز الآن ←</a></div>
+        </div>
+        <div class="folder-card">
+          <div class="folder-top bg-blue"><span class="plus-badge">+</span><div class="icon-circle">❤️</div></div>
+          <div class="folder-bottom"><h3>الباطنة والقلب</h3><p>فحص شامل ومتابعة دقيقة لصحة القلب والجهاز الهضمي.</p><a href="#book">احجز الآن ←</a></div>
+        </div>
+        <div class="folder-card">
+          <div class="folder-top bg-mint"><span class="plus-badge">+</span><div class="icon-circle">🧒</div></div>
+          <div class="folder-bottom"><h3>طب الأطفال</h3><p>متابعة نمو الطفل والتطعيمات في بيئة مريحة وآمنة.</p><a href="#book">احجز الآن ←</a></div>
+        </div>
+        <div class="folder-card">
+          <div class="folder-top bg-coral"><span class="plus-badge">+</span><div class="icon-circle">✨</div></div>
+          <div class="folder-bottom"><h3>الجلدية والليزر</h3><p>علاجات تجميلية وجلدية بأحدث تقنيات الليزر الآمنة.</p><a href="#book">احجز الآن ←</a></div>
+        </div>
+        <div class="folder-card">
+          <div class="folder-top bg-yellow"><span class="plus-badge">+</span><div class="icon-circle">🩻</div></div>
+          <div class="folder-bottom"><h3>الأشعة والمختبر</h3><p>نتائج فحوصات دقيقة وسريعة بأحدث أجهزة التصوير.</p><a href="#book">احجز الآن ←</a></div>
+        </div>
+        <div class="folder-card">
+          <div class="folder-top bg-blue"><span class="plus-badge">+</span><div class="icon-circle">🏃</div></div>
+          <div class="folder-bottom"><h3>العلاج الطبيعي</h3><p>برامج تأهيل وعلاج طبيعي مصممة حسب حالة كل مريض.</p><a href="#book">احجز الآن ←</a></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="why">
+    <div class="wrap">
+      <div class="why-visual">
+        <div class="mini-row"><div class="mini-icon" style="background:#fff;">🩺</div><div><strong style="font-family:'Cairo'; font-size:14px;">تشخيص دقيق</strong><br><span style="font-size:12px; color:#4a4e5a;">بأحدث الأجهزة الطبية</span></div></div>
+        <div class="mini-row"><div class="mini-icon" style="background:var(--blue-soft);">⏱️</div><div><strong style="font-family:'Cairo'; font-size:14px;">انتظار أقل</strong><br><span style="font-size:12px; color:#4a4e5a;">مواعيد منظمة إلكترونياً</span></div></div>
+        <div class="mini-row"><div class="mini-icon" style="background:#e6fbf5;">🛡️</div><div><strong style="font-family:'Cairo'; font-size:14px;">خصوصية تامة</strong><br><span style="font-size:12px; color:#4a4e5a;">حماية كاملة لملفك الطبي</span></div></div>
+      </div>
+      <div class="why-content">
+        <span class="eyebrow">✦ لماذا عيادة النخبة</span>
+        <h2 style="font-size:32px; font-weight:900; margin-bottom:26px;">تجربة رعاية صحية مختلفة</h2>
+        <div class="why-list">
+          <div class="why-item"><div class="num" style="background:var(--yellow);">1</div><div><h4>أطباء معتمدون</h4><p>نخبة من الاستشاريين حاصلين على شهادات دولية معتمدة.</p></div></div>
+          <div class="why-item"><div class="num" style="background:var(--blue); color:#fff;">2</div><div><h4>أجهزة وتقنيات حديثة</h4><p>استثمار مستمر في أحدث التقنيات الطبية والتشخيصية.</p></div></div>
+          <div class="why-item"><div class="num" style="background:var(--mint);">3</div><div><h4>حجز إلكتروني سهل</h4><p>احجز موعدك في أقل من دقيقة عبر الموقع أو التطبيق.</p></div></div>
+          <div class="why-item"><div class="num" style="background:var(--coral); color:#fff;">4</div><div><h4>رعاية على مدار الساعة</h4><p>قسم طوارئ وخط ساخن متاح 24 ساعة طوال أيام الأسبوع.</p></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+ <div>
+  <section class="doctors" id="doctors">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">✦ فريقنا الطبي</span>
+      <h2>تعرّف على استشاريينا</h2>
+      <p>نخبة من الأطباء ذوي الخبرة الطويلة، جاهزون لتقديم أفضل رعاية لك ولعائلتك.</p>
+    </div>
+    <!-- سنقوم بحقن الأطباء هنا تلقائياً بواسطة JavaScript -->
+    <div class="doctors-grid" id="doctorsGrid">
+      <p style="text-align:center; font-weight:700;">جاري تحميل الأطباء...</p>
+    </div>
+  </div>
+</section>
+</div> 
+
+  <section class="testi" id="testimonials">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">✦ آراء مرضانا</span>
+        <h2>ثقة مرضانا هي شهادتنا</h2>
+      </div>
+      <div class="testi-grid">
+        <div class="testi-card"><div class="quote-mark">"</div><p>تجربة ممتازة من الاستقبال إلى الكشف. الحجز الإلكتروني وفر عليّ وقت الانتظار كثيراً.</p><div class="testi-person"><div class="testi-avatar" style="background:var(--yellow);">م.ع</div><div><strong>منى العنزي</strong><span>مريضة قسم الجلدية</span></div></div></div>
+        <div class="testi-card"><div class="quote-mark">"</div><p>الدكتور شرح لي حالتي بالتفصيل وما استعجل أبداً. أنصح فيها بشدة لأي شخص يدور رعاية صحية موثوقة.</p><div class="testi-person"><div class="testi-avatar" style="background:var(--blue-soft);">ع.س</div><div><strong>عبدالله الشهري</strong><span>مريض قسم الباطنة</span></div></div></div>
+        <div class="testi-card"><div class="quote-mark">"</div><p>طاقم تمريض متعاون جداً والعيادة نظيفة ومنظمة. ابني ما خاف عند الدكتورة أبداً.</p><div class="testi-person"><div class="testi-avatar" style="background:#e6fbf5;">ه.ق</div><div><strong>هند القحطاني</strong><span>ولية أمر - قسم الأطفال</span></div></div></div>
+      </div>
+    </div>
+  </section>
+
+<section class="book" id="book">
+  <div class="wrap">
+    <div class="book-box">
+      <div class="book-text">
+        <h2>جاهز تحجز موعدك؟</h2>
+        <p>عبّي النموذج وفريقنا بيتواصل معك خلال دقائق لتأكيد الموعد، أو تواصل معنا مباشرة.</p>
+        <div class="contact-quick">
+          <a href="tel:920001234" class="btn btn-yellow btn-sm">📞 اتصل الآن</a>
+          <button id="openModalBtn" class="btn btn-blue btn-sm">احجز موعدك إلكترونياً ←</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <footer>
+    <div class="wrap">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="brand"><span class="logo-badge">✚</span> عيادة النخبة الطبية</div>
+          <p>رعاية صحية شاملة بأيدي نخبة من الاستشاريين وأحدث الأجهزة الطبية، في بيئة تهتم براحتك.</p>
+          <div class="social-row"><a href="#">𝕏</a><a href="#">ig</a><a href="#">in</a></div>
+        </div>
+        <div class="footer-col"><h5>روابط سريعة</h5><ul><li><a href="#home">الرئيسية</a></li><li><a href="#services">خدماتنا</a></li><li><a href="#doctors">أطباؤنا</a></li><li><a href="#testimonials">آراء المرضى</a></li></ul></div>
+        <div class="footer-col"><h5>الأقسام</h5><ul><li><a href="#">طب الأسنان</a></li><li><a href="#">الباطنة والقلب</a></li><li><a href="#">طب الأطفال</a></li><li><a href="#">الجلدية والليزر</a></li></ul></div>
+        <div class="footer-col"><h5>تواصل معنا</h5><ul><li>📍 الدمام، المنطقة الشرقية</li><li>📞 920001234</li><li>✉️ info@elite-clinic.sa</li><li>🕐 يومياً 8ص - 11م</li></ul></div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 عيادة النخبة الطبية. جميع الحقوق محفوظة.</span>
+        <span>تصميم بأسلوب Neo-Brutalism</span>
+      </div>
+    </div>
+  </footer>
+
+    <!-- نافذة الحجز المنبثقة (Modal) -->
+<div id="bookingModal" class="modal-overlay">
+  <div class="modal-card">
+    <button class="close-modal" id="closeModalBtn">×</button>
+    <h3>احجز موعدك الطبي</h3>
+    <form id="bookingForm">
+      <div class="form-row">
+        <label>الاسم الكامل</label>
+        <input type="text" id="patientName" placeholder="اكتب اسمك" required>
+      </div>
+      <div class="form-row">
+        <label>رقم الجوال</label>
+        <input type="tel" id="patientPhone" placeholder="05xxxxxxxx" required>
+      </div>
+      <div class="form-row">
+        <label>القسم المطلوب</label>
+        <select id="patientDept" required>
+          <option value="">اختر القسم</option>
+          <option value="dentist">طب الأسنان</option>
+          <option value="heart">الباطنة والقلب</option>
+          <option value="kids">طب الأطفال</option>
+          <option value="derma">الجلدية والليزر</option>
+        </select>
+      </div>
+      <div class="form-row">
+        <label>اختر الطبيب</label>
+        <select id="patientDoctor" required>
+          <option value="">اختر الطبيب أولاً</option>
+        </select>
+      </div>
+      <button type="submit" class="btn btn-blue">تأكيد طلب الحجز ←</button>
+    </form>
+  </div>
+</div>
+
+<!-- رسالة النجاح (Toast) -->
+<div id="successToast" class="toast">✓ تم استلام طلبك بنجاح! سنتواصل معك قريباً.</div>
+
+  <script src="script.js"></script>
+</body>
+</html>
