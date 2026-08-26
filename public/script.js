@@ -122,11 +122,13 @@ if (bookingForm) {
     submitBtn.disabled = true;
     submitBtn.innerText = 'جاري الإرسال...';
 
-    const data = {
+       const data = {
       name: document.getElementById('patientName').value,
       phone: document.getElementById('patientPhone').value,
       department: document.getElementById('patientDept').value,
-      doctorId: document.getElementById('patientDoctor').value
+      doctorId: document.getElementById('patientDoctor').value,
+      bookingDay: document.getElementById('bookingDay').value, // جديد
+      bookingTime: document.getElementById('bookingTime').value // جديد
     };
 
     try {

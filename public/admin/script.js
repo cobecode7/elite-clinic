@@ -128,7 +128,8 @@ async function loadBookings() {
       <div class="booking-item">
         <div>
           <strong>${b.name}</strong> - ${b.phone}<br>
-          <small>القسم: ${b.department} | الطبيب: ${docName} | التاريخ: ${new Date(b.createdAt).toLocaleDateString('ar-EG')}</small>
+          <small>القسم: ${b.department} | الطبيب: ${docName}</small><br>
+          <small style="color:var(--blue); font-weight:800;">📅 موعد الحجز: ${b.bookingDay} - ${b.bookingTime}</small>
         </div>
         <div class="booking-actions">
           <span class="status-${b.status}">${b.status === 'pending' ? 'معلق' : 'مؤكد'}</span>

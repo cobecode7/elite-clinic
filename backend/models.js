@@ -5,7 +5,9 @@ const Booking = sequelize.define('Booking', {
   name: { type: DataTypes.STRING, allowNull: false },
   phone: { type: DataTypes.STRING, allowNull: false },
   department: { type: DataTypes.STRING, allowNull: false },
-  status: { type: DataTypes.STRING, defaultValue: 'pending' }
+  status: { type: DataTypes.STRING, defaultValue: 'pending' },
+  bookingDay: { type: DataTypes.STRING, allowNull: false }, // جديد
+  bookingTime: { type: DataTypes.STRING, allowNull: false } // جديد
 }, { tableName: 'bookings', timestamps: true });
 
 const Doctor = sequelize.define('Doctor', {

@@ -36,23 +36,23 @@ router.post('/api/bookings', bookingLimiter, async (req, res) => {
       name: z.string().min(3, "الاسم يجب أن يكون 3 أحرف على الأقل"),
       phone: z.string().regex(/^05\d{8}$/, "رقم الجوال يجب أن يبدأ بـ 05 ويتكون من 10 أرقام"),
       department: z.string().min(1, "يجب اختيار القسم"),
-      doctorId: z.string().optional().or(z.number())
+      doctorId: z.string().optional().or(z.number()),
+      bookingDay: z.string().min(1, "يجب اختيار اليوم"),
+      bookingTime: z.string().min(1, "يجب اختيار الوقت")
     });
 
-    // 2. تطبيق التحقق على البيانات الواردة
+    // 2. تطبيق التحقق
     const validation = bookingSchema.safeParse(req.body);
-    
     if (!validation.success) {
-      // إذا كانت البيانات خاطئة، أرجع رسالة الخطأ للمستخدم
       return res.status(400).json({ 
         error: "بيانات غير صحيحة", 
         details: validation.error.issues[0].message 
       });
     }
 
-    // 3. إذا كانت البيانات صحيحة، احفظها في الداتابيز
-    const { name, phone, department, doctorId } = validation.data;
-    const newBooking = await Booking.create({ name, phone, department, doctorId });
+    // 3. الحفظ في الداتابيز
+    const { name, phone, department, doctorId, bookingDay, bookingTime } = validation.data;
+    const newBooking = await Booking.create({ name, phone, department, doctorId, bookingDay, bookingTime });
     
     res.status(201).json({ message: 'تم إنشاء الحجز بنجاح', booking: newBooking });
   } catch (error) {
@@ -60,7 +60,6 @@ router.post('/api/bookings', bookingLimiter, async (req, res) => {
     res.status(500).json({ error: 'حدث خطأ في الخادم' });
   }
 });
-
 // --- مسارات لوحة التحكم (Admin) ---
 router.post('/api/admin/login', loginLimiter, async (req, res) => {
   const { username, password } = req.body;
