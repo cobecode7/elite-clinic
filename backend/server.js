@@ -11,9 +11,6 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 // 🛡️ تفعيل Helmet لتأمين الـ HTTP Headers
-app.use(helmet());
-
-// إعدادات الحماية للسماح بتحميل الصور والملفات من نفس النطاق
 app.use(
   helmet.contentSecurityPolicy({
     directives: {
@@ -22,6 +19,7 @@ app.use(
       styleSrc: ["'self'", "'unsafe-inline'", 'https://fonts.googleapis.com'],
       fontSrc: ["'self'", 'https://fonts.gstatic.com'],
       imgSrc: ["'self'", 'data:'],
+      connectSrc: ["'self'"], // <--- تمت إضافة هذا السطر للسماح بطلبات الـ API (Fetch)
     },
   })
 );

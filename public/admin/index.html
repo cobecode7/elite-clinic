@@ -6,7 +6,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@600;700;800;900&family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
+  <body>
 
   <!-- شاشة تسجيل الدخول -->
   <div id="loginScreen" class="login-screen">
@@ -24,9 +24,9 @@
     <aside class="sidebar">
       <h3>النخبة | إدارة</h3>
       <nav>
-        <a href="#" onclick="showSection('stats')">الإحصائيات</a>
-        <a href="#" onclick="showSection('bookings')">الحجوزات</a>
-        <a href="#" onclick="showSection('doctors')">الأطباء</a>
+        <a href="#" class="nav-link" data-section="stats">الإحصائيات</a>
+        <a href="#" class="nav-link" data-section="bookings">الحجوزات</a>
+        <a href="#" class="nav-link" data-section="doctors">الأطباء</a>
         <a href="/" target="_blank">عرض الموقع</a>
       </nav>
     </aside>
@@ -45,11 +45,10 @@
       <!-- قسم الحجوزات -->
       <section id="bookings" class="section hidden">
         <h2>طلبات الحجز</h2>
-
-                  <!-- قائمة الفلترة -->
+        
         <div class="filter-bar">
           <label>تصفية الحجوزات:</label>
-          <select id="bookingFilter" onchange="loadBookings()">
+          <select id="bookingFilter">
             <option value="all">عرض الكل</option>
             <option value="pending">المعلقة فقط</option>
             <option value="confirmed">المؤكدة فقط</option>
@@ -65,7 +64,7 @@
         <div class="doctor-form">
           <input type="text" id="docName" placeholder="اسم الطبيب">
           <input type="text" id="docSpec" placeholder="التخصص">
-          <button class="btn btn-mint" onclick="addDoctor()">إضافة طبيب</button>
+          <button class="btn btn-mint" id="addDoctorBtn">إضافة طبيب</button>
         </div>
         <div id="doctorsList" class="doctors-list"></div>
       </section>

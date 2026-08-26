@@ -57,24 +57,23 @@ async function loadDoctors() {
     // أ) تعبئة قسم الأطباء في الصفحة الرئيسية
     const grid = document.getElementById('doctorsGrid');
     if (grid) {
-      grid.innerHTML = ''; // تفريغ رسالة "جاري التحميل"
+      grid.innerHTML = '';
       
       doctors.forEach(doc => {
-        
-      // استخراج الأحرف الأولى بأمان
-      let cleanName = doc.name.replace(/د\.?\s?/, '').trim();
-      let nameParts = cleanName.split(/\s+/).filter(Boolean);
-      let initials = nameParts.length >= 2 
-        ? `${nameParts[0][0]}.${nameParts[1][0]}` 
-        : (nameParts[0] ? nameParts[0][0] : '');
+        let cleanName = doc.name.replace(/د\.?\s?/, '').trim();
+        let nameParts = cleanName.split(/\s+/).filter(Boolean);
+        let initials = nameParts.length >= 2 
+          ? `${nameParts[0][0]}.${nameParts[1][0]}` 
+          : (nameParts[0] ? nameParts[0][0] : '');
 
+        // تمت إزالة onclick واستبدالها بـ data-doctor-id
         grid.innerHTML += `
           <div class="doc-card">
             <div class="avatar" style="background:${doc.avatarColor};">${initials}</div>
             <h4>${doc.name}</h4>
             <div class="spec">${doc.specialty}</div>
             <div class="stars">★★★★★</div>
-            <button class="btn btn-sm btn-mint" onclick="openModal()">احجز معه</button>
+            <button class="btn btn-sm btn-mint open-modal-btn" data-doctor-id="${doc.id}">احجز معه</button>
           </div>
         `;
       });
@@ -91,11 +90,27 @@ async function loadDoctors() {
         select.appendChild(option);
       });
     }
+
+    // 🚀 تفويض الأحداث (Event Delegation) لالتقاط نقرات أزرار الأطباء بدون onclick
+    document.body.addEventListener('click', (e) => {
+      const btn = e.target.closest('.open-modal-btn');
+      if (btn) {
+        e.preventDefault(); // منع الرابط من التحرك لأسفل الصفحة
+        openModal(); // فتح النافذة
+        
+        // إذا كان الزر يحمل معرف طبيب، قم بتحديده في القائمة المنسدلة
+        const docId = btn.getAttribute('data-doctor-id');
+        if (docId && select) {
+          select.value = docId;
+        }
+      }
+    });
+
   } catch (error) {
     console.error('Error loading doctors:', error);
   }
 }
-loadDoctors(); // تشغيل فور تحميل الصفحة
+loadDoctors();
 
 // 5. إرسال النموذج
 const bookingForm = document.getElementById('bookingForm');
